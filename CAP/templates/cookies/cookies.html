@@ -1,0 +1,39 @@
+{% extends 'plantillas/baseWeb.html' %}
+
+{% load static %}
+{% block titulo %} Programación, Electricidad, Automatización {% endblock %}
+{% block css %}
+<link href="{% static 'css/cookies/cookies.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/cookies/cookies.js' %}"></script>
+{% endblock %}
+
+{% block menu %}
+
+{% endblock %}
+
+
+{% block contenido %}
+<div id="contenido">
+<h1>POLITICA DE COOKIES</h1>
+<h2>Uso de cookies</h2>
+<p>CAPprog utiliza cookies,unicamente con fines de la facilidad de navegación en el portal, 
+    análisis de contenido visitado e interés por el mismo.
+</p>
+<p>Para el acceso a algunas de las paginas se requerirá el registro. Siendo mínimos los datos imprescindibles, un 
+    nombre de usuario, contraseña y email válido, realizándose la confirmación mediante en envío de un correo de confirmación.
+    El propósito de la solucitud del email es solamente el aviso ante cambios importantes en la página.
+    No se realizarán envíos de publicidad.
+</p>
+<p>Siendo el único interés la mejora del portal así como centrarse en el desarrollo de aquellos temas que 
+    en los cuales los usuarios estén más interesados.
+</p>
+<h2>Vigencia de las cookies</h2>
+    <p>La vigencia se establecerá por un periodo de 6 meses.</p>
+<h2>Borrado de las cookies</h2>
+    <p>Desde su navegador podrá proceder al borrado de las cookies en cualquier momento.</p>
+</div>
+{% endblock %}

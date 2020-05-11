@@ -1,0 +1,37 @@
+{% extends 'plantillas/baseWeb.html' %}
+
+{% load static %}
+{% block titulo %} Programación, Electricidad, Automatización {% endblock %}
+{% block css %}
+<link href="{% static 'css/programacion/programacion.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/programacion/programacion.js' %}"></script>
+{% endblock %}
+
+{% block menu %}
+<div id="barraMenu">
+  <button id="btInicio" class="botonMenu">Inicio</button>
+  <button id="btProgramacion" class="botonProgramacion">Programación</button>
+  <button id="btAutomatizacion" class="botonMenu">Automatización</button>
+  <button id="btElectricidad" class="botonMenu">Electricidad</button>
+</div>
+{% endblock %}
+
+
+{% block contenido %}
+</div class="contenido">
+
+<iframe id="ventanaSuperior" width="500" height="400" src="http://www.apple.es">
+
+</iframe>
+<p>Esto es una prueba linea 1</p>
+ <p  style="font-size: 36px; text-align: center;">PAGINA EN CONSTRUCCIÓN</p>
+ <p style="font-size: 36px; text-align: center;">PROGRAMACIÓN en templatess</p>
+
+ <p>Esto es una prueba linea 2</p>
+
+</div>
+{% endblock %}

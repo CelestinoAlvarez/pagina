@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+  <PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>{% block titulo %} {% endblock %}</title>
+  <script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+  {% block css %}
+
+  {% endblock %}
+  
+
+  {% block js %}
+
+  {% endblock %}
+  
+<style>
+  .pie{
+  background-color: rgb(75, 73, 73);
+  color:white;
+  border-left: black;
+  border-right: black;
+}
+.pie p{
+  margin: 10px 0px 10px 30px;
+  font-size: 20px;
+}
+
+.pie hr{
+  color:white;
+  background-color:rgb(75, 73, 73) ;
+  margin: 0px;
+}
+
+.pie span{
+  margin-left: 520px;
+}
+
+</style>
+<script>
+
+</script>
+</head>
+
+<body>
+  <div id="principal">
+    <div id="encabezado">
+        <div id="nombreEmpresa">
+          <p>CAP <span>prog</span></p>
+        </div>
+    </div>
+
+    {% block menu %}
+
+
+    {% endblock %}
+  
+
+    {% block contenido %}
+
+    {% endblock %}
+
+
+    <div class="pie" >
+        <br>
+        <hr>
+             <p> @CAP programación <span>administracion@capprog.es</span></p>
+         <hr>
+         <br>
+    </div>
+
+
+</body>
+
+
+
+
+</html>

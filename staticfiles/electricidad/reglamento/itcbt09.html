@@ -1,0 +1,321 @@
+{% extends 'plantillas/resumen.html' %}
+
+{% load static %}
+{% block titulo %} Reglamento Electrotécnico de Baja Tensión REBT {% endblock %}
+{% block css %}
+<link href="{% static 'css/electricidad/reglamento/reglamento.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/programacion/programacion.js' %}"></script>
+{% endblock %}
+
+{% block menu %}
+
+{% endblock %}
+
+
+{% block contenido %}
+<div id="contenido">
+    <h1>Instalaciones de alumbrado exterior</h1>
+    <h2>Acometida: aérea o subterránea con cables aislados.</h2>
+    <h2>Dimensionado: la potencia será la instalada x1.8 cuando existan lámparas de descarga, el factor de potencia será de 0,9 y la caida de tensión máxima 3%.</h2>
+    <h2>Protecciones: deberá existir protección magnetotérmica omnipolar, la protección diferencial podrá ser de 300, 500 o 1.000mA, siempre que la resistencia 
+        de tierra se menor o igual a 30, 5 ó 1 Ohmio respectivamente.</h2> 
+    <h2>Envolvente: será IP55 e IK10, será cerrada mediante llave y el acceso estará entre 0,3 y 2m. Las partes metálicas estarán a tierra.</h2>
+    <h2>Conductores: serán de cobre o aluminio y tensión 0,6/1kV. Existirá un conductor neutro para cada circuito.</h2>
+    <h1>Redes subterráneas</h1>
+    <h2>La sección mínima del conductor es de 6mm<span id="cuadrado">2</span>, la canalización mínima será de 6cm irán enterrados a una profundidad mínima
+    de 40cm y se colocará una cinta de señalización a 25cm sobre la canalización.</h2>
+</div>
+
+<div>
+    <h1>CÁLCULO</h1>
+    <select name="tipoConductor" id="tipoConductor">
+        <option label="Tipo" value="0">Tipo conductor</option>
+        <option label="cobre" value="1">COBRE</option>
+        <option label="aluminio" value="2">ALUMINIO</option>
+    </select>
+
+    <select name="seccion" id="seccion">
+        <option label="0" value="0">SECCIÓN</option>
+        <option label="6" value="1">6 mm<span id="cuadrado">2</span></option>
+        <option label="10" value="2">10 mm<span id="cuadrado">2</span></option>
+        <option label="16" value="3">16 mm<span id="cuadrado">2</span></option>
+        <option label="25" value="4">25 mm<span id="cuadrado">2</span></option>
+        <option label="35" value="5">35 mm<span id="cuadrado">2</span></option>
+        <option label="50" value="6">50 mm<span id="cuadrado">2</span></option>
+        <option label="70" value="7">70 mm<span id="cuadrado">2</span></option>
+        <option label="95" value="8">95 mm<span id="cuadrado">2</span></option>
+        <option label="120" value="9">120 mm<span id="cuadrado">2</span></option>
+        <option label="150" value="10">150 mm<span id="cuadrado">2</span></option>
+        <option label="185" value="11">185 mm<span id="cuadrado">2</span></option>
+        <option label="240" value="12">240 mm<span id="cuadrado">2</span></option>
+        <option label="300" value="13">300 mm<span id="cuadrado">2</span></option>
+        <option label="400" value="14">400 mm<span id="cuadrado">2</span></option>
+        <option label="500" value="15">500 mm<span id="cuadrado">2</span></option>
+        <option label="630" value="16">630 mm<span id="cuadrado">2</span></option>
+    </select>
+
+    <select name="aislamiento" id="aislamiento">
+        <option label="AISLAMIENTO" value="0">AISLAMIENTO</option>
+        <option label="UNIPOLAR-XLPE" value="1">UNIPOLAR - XLPE</option>
+        <option label="UNIPOLAR-EPR" value="2">UNIPOLAR - EPR</option>
+        <option label="UNIPOLAR-PVC" value="3">UNIPOLAR - PVC</option>
+        <option label="MULTIPOLAR-XLPE" value="4">MULTIPOLALR - XLPE</option>
+        <option label="MULTIPOLAR-EPR" value="5">MULTIPOLAR - EPR</option>
+        <option label="MULTIPOLAR-PVC" value="6">MULTIPOLAR - PVC</option>
+    </select>
+
+    <select name="alimentacion" id="alimentacion">
+        <option label="ALIMENTACION" value="0">ALIMENTACIÓN</option>
+        <option label="MONOFASICA" value="1">MONOFÁSICA</option>
+        <option label="TRIFÁSICA" value="2">TRIFÁSICA</option>
+    </select>
+
+    <select name="temperatura" id="temperatura">
+        <option label="TEMPERATURA" value="0">TEMPERATURA</option>
+        <option label="10" value="10">10ºC</option>
+        <option label="11" value="11">11ºC</option>
+        <option label="12" value="12">12ºC</option>
+        <option label="13" value="13">13ºC</option>
+        <option label="14" value="14">14ºC</option>
+        <option label="15" value="15">15ºC</option>
+        <option label="16" value="16">16ºC</option>
+        <option label="17" value="17">17ºC</option>
+        <option label="18" value="18">18ºC</option>
+        <option label="19" value="19">19ºC</option>
+        <option label="20" value="20">20ºC</option>
+        <option label="21" value="21">21ºC</option>
+        <option label="22" value="22">22ºC</option>
+        <option label="23" value="23">23ºC</option>
+        <option label="24" value="24">24ºC</option>
+        <option label="25" value="25">25ºC</option>
+        <option label="26" value="26">26ºC</option>
+        <option label="27" value="27">27ºC</option>
+        <option label="28" value="28">28ºC</option>
+        <option label="29" value="29">29ºC</option>
+        <option label="30" value="30">30ºC</option>
+        <option label="31" value="31">31ºC</option>
+        <option label="32" value="32">32ºC</option>
+        <option label="33" value="33">33ºC</option>
+        <option label="34" value="34">34ºC</option>
+        <option label="35" value="35">35ºC</option>
+        <option label="36" value="36">36ºC</option>
+        <option label="37" value="37">37ºC</option>
+        <option label="38" value="38">38ºC</option>
+        <option label="39" value="39">39ºC</option>
+        <option label="40" value="40">40ºC</option>
+        <option label="41" value="41">41ºC</option>
+        <option label="42" value="42">42ºC</option>
+        <option label="43" value="43">43ºC</option>
+        <option label="44" value="44">44ºC</option>
+        <option label="45" value="45">45ºC</option>
+        <option label="46" value="46">46ºC</option>
+        <option label="47" value="47">47ºC</option>
+        <option label="48" value="48">48ºC</option>
+        <option label="49" value="49">49ºC</option>
+        <option label="50" value="50">50ºC</option>
+    </select>
+
+    <select name="resistividadTermica" id="resistividadTermica">
+        <option label="resistividad" value="0">RESISTIVIDAD TÉRMICA</option>
+        <option label="1" value="1">0,80 K.m/W</option>
+        <option label="2" value="2">0,85 K.m/W</option>
+        <option label="3" value="3">0,90 K.m/W</option>
+        <option label="4" value="4">1 K.m/W</option>
+        <option label="5" value="5">1,10 K.m/W</option>
+        <option label="6" value="6">1,20 K.m/W</option>
+        <option label="7" value="7">1,40 K.m/W</option>
+        <option label="8" value="8">1,65 K.m/W</option>
+        <option label="9" value="9">2,00 K.m/W</option>
+        <option label="10" value="10">2,5 K.m/W</option>
+        <option label="11" value="11">2,8 K.m/W</option>
+    </select>
+
+    <select name="cantidadConductores" id="cantidadConductores">
+        <option label="cantidadConductores" value="0">Nº CONDUCTORES</option>
+        <option label="1" value="1">Un único conductor</option>
+        <option label="2" value="0.8">2 conductores</option>
+        <option label="3" value="0.7">3 conductores</option>
+        <option label="4" value="0.64">4 conductores</option>
+        <option label="5" value="0.6">5 conductores</option>
+        <option label="6" value="0.56">6 conductores</option>
+        <option label="8" value="0.53">8 conductores</option>
+        <option label="10" value="0.5">10 conductores</option>
+        <option label="12" value="0.47">12 conductores</option>
+    </select> 
+
+    <select name="profundidad" id="profundidad">
+        <option label="profundidad" value="0">PROFUNDIDAD</option>
+        <option label="1" value="1.03">0,4 m</option>
+        <option label="2" value="1.02">0,5 m</option>
+        <option label="3" value="1.01">0,6 m</option>
+        <option label="4" value="1">0,7 m</option>
+        <option label="5" value="0.99">0,8 m</option>
+        <option label="6" value="0.98">0,9 m</option>
+        <option label="7" value="0.97">1 m</option>
+        <option label="8" value="0.95">1,2 m</option>
+      </select> 
+
+    <button name="btCalcular" id="btCalcular">CALCULAR</button>
+
+    
+<script>
+    // CALCULO DE LA CORRIENTE ITC-09
+    var corrientesAl=[
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [97,94,86,90,86,76],
+                [125,120,110,115,110,98],
+                [150,145,130,140,135,120],
+                [180,175,155,165,160,140],
+                [220,215,190,205,220,170],
+                [260,255,225,240,235,210],
+                [295,290,260,275,270,235],
+                [330,325,290,310,305,265],
+                [375,365,325,350,345,300],
+                [430,420,380,405,395,250],
+                [485,475,430,460,445,395],
+                [550,540,480,520,500,445],
+                [615,605,525,0,0,0],
+                [690,680,600,0,0,0]
+                ];
+
+    var corrientesCu=[
+                [72,70,63,66,64,56],
+                [96,94,85,88,85,75],
+                [125,120,110,115,110,97],
+                [160,155,140,150,140,125],
+                [190,185,170,180,175,150],
+                [230,225,200,215,205,180],
+                [280,270,245,260,250,220],
+                [335,325,290,310,305,265],
+                [380,375,335,355,350,305],
+                [425,415,370,400,390,340],
+                [480,470,420,450,440,385],
+                [550,540,485,520,505,445],
+                [620,610,550,590,565,505],
+                [705,690,615,665,654,570],
+                [790,775,685,0,0,0],
+                [885,870,770,0,0,0],
+               
+                ];
+
+    var resistividadTermica=[
+                [1.09,1.06,1.04,1,0.96,0.93,0.87,0.81,0.75,0.68,0.66],
+                [1.07,1.05,1.03,1,0.97,0.94,0.89,0.84,0.78,0.71,0.69]
+    ];
+
+    var cantidadaConductores=[1,0.8,0.7,0.64,0.56,0.53,0.5,0.47];
+
+    var profundidad=[1.03,1.02,1.01,1,0.99,0.98,0.97,0.95];
+
+    $("#btCalcular").click(function(){
+      var tipoConductor=$("#tipoConductor").val();
+      var seccion=$("#seccion").val();
+      var aislamiento=$("#aislamiento").val();
+      var alimentacion=$("#alimentacion").val();
+      var factorAlimentacion=1;
+      var temperatura=$("#temperatura").val();
+      var factorTemperatura=1.00;
+      var resistividad=$("#resistividadTermica").val();
+      var factorResistividad=0;
+      var conductores=$("#cantidadConductores").val();
+      var factorConductores=1;
+      var profund=$("#profundidad").val();
+      var factorProfundidad=1.0;
+      var corrienteTabla=0;
+      var corriente=0;
+      var elemento="El conductor es de ";    
+      
+    switch(tipoConductor){
+        case '1': elemento=elemento+"cobre ";
+                corrienteTabla=corrientesCu[$("#seccion").val()-1][$("#aislamiento").val()-1];
+                break;
+
+        case '2': elemento=elemento+"aluminio ";
+                corrienteTabla=corrientesAl[$("#seccion").val()-1][$("#aislamiento").val()-1];
+                break;
+        
+        default:
+                alert("Error en selección tipo de conductor");
+      }
+
+    corriente=corrienteTabla;
+
+    if (alimentacion==1){
+        corriente*=1.225;
+        factorAlimentacion=1.225;
+    }
+
+   
+    switch(aislamiento){
+        case '1':
+        case '2':
+        case '4':
+        case '5': 
+                factorTemperatura=Math.sqrt((90.0-$("#temperatura").val())/65.0);
+                factorTemperatura=Math.round(factorTemperatura*100)/100;
+                break;
+            
+        case '3':
+        case '6': 
+                factorTemperatura=Math.sqrt((70.0-$("#temperatura").val())/45.0);
+                factorTemperatura=Math.round(factorTemperatura*100)/100;
+                break;
+
+        default:
+                alert("Error valor no encontrado");  
+      }
+
+    corriente*=factorTemperatura;
+
+//Resistividad térmica
+    factorResistividad=resistividadTermica[alimentacion-1][resistividad];
+    corriente*=factorResistividad;
+   
+//Cantidad conductores
+    factorConductores=$("#cantidadConductores").val(); 
+    corriente*=factorConductores;
+
+//Corrección por profundidad.
+    factorProfundidad=$("#profundidad").val();
+    corriente*=factorProfundidad;
+    corriente=Math.round(corriente*10)/10;
+
+    $("#resultado").append("<h2> Tipo conductor = "+$("#tipoConductor option:selected").text()+"</h2>");
+    $("#resultado").append("<h2> Sección = "+$("#seccion option:selected").text());
+    $("#resultado").append("<h2> Tipo de aislamiento = "+$("#aislamiento option:selected").text());
+    $("#resultado").append("<h2> Corriente = "+corrienteTabla+"</h2>");
+    $("#resultado").append("<h2> Tipo de alimentación = "+$("#alimentacion option:selected").text()+"  Corrección = "+factorAlimentacion+"</h2>");
+    $("#resultado").append("<h2> Temperatura del terreno = "+$("#temperatura option:selected").text()+"  Corrección = "+factorTemperatura+"</h2>");
+    $("#resultado").append("<h2> Resistividad térmica = "+$("#resistividadTermica option:selected").text()+"  Corrección = "+factorResistividad+"</h2>");
+    $("#resultado").append("<h2> Número de conductores = "+$("#cantidadConductores option:selected").text()+"  Corrección = "+factorConductores+"</h2>");
+    $("#resultado").append("<h2> Profundidad = "+$("#profundidad option:selected").text()+"  Corrección = "+ factorProfundidad +"</h2>");
+    $("#resultado").append("<h2> Corriente calculada= "+corriente+"</h2>");
+   
+    });
+
+  
+</script>
+
+<h1>Luminarias</h1>
+<h2>En el interior de los soportes de las luminarias los conductores serán de cobre de sección mínima 2,5mm<span id="cuadrado">2</span> 0,6/1kV.</h2>
+<h2>Los puntos de luz estarán a una altura mínima de 2,5m y deberán estar protegidos contra sobreintensidades individualmente.</h2>
+<h2>Las luminarias que tengan partes metalicas deberán estar puestas a tierra, mediante conductor de 2,5mm<span id="cuadrado">2</span>A/V.</h2>
+<h1>Puestas a tierra</h1>
+<h2>La resistencia de tierra tendrá un valor que no permita que se produzcan tensiones de contacto superiores a 24V. </h2>
+<h2>Las picas de tierra se instalarán cada 5 soportes como mínimo y siempre en el primero y el último.</h2>
+<h2>Los conductores serán: si son desnudos de 35mm<span id="cuadrado">2</span> mínimo y si son aislados de 16mm<span id="cuadrado">2</span> A/V. 
+    Los soportes irán unidos a la red de tierras mediante conductor A/V de 16mm<span id="cuadrado">2</span> mediante terminal o soldadura.</h2>
+<div id="resultado">
+    <h1>Resultado</h1>
+
+</div>
+</div>
+
+</div>
+{% endblock %}
+

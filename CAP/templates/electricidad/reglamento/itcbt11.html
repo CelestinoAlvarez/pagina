@@ -1,0 +1,39 @@
+{% extends 'plantillas/resumen.html' %}
+
+{% load static %}
+{% block titulo %} Reglamento Electrotécnico de Baja Tensión REBT {% endblock %}
+{% block css %}
+<link href="{% static 'css/electricidad/reglamento/reglamento.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/programacion/programacion.js' %}"></script>
+{% endblock %}
+
+{% block menu %}
+
+{% endblock %}
+
+
+{% block contenido %}
+<div id="contenido">
+<h1>Acometida</h1>
+<h2>Parte de la instalación que va desde la red de distribución hasta la caja general de protección</h2>
+<h2>Deberan atenerse las ITC-BT-06 y 07 según corresponda al tipo de instalación y dimensionarse teniendo en cuenta la ITC-BT-10.</h2>
+<h1>Instalación de enlace</h1>
+<h2>La instalación de enlace es la parte de la instalación que va desde la caja general de protección hasta los dispositivos generales de 
+    mando y protección (interruptores automáticos).</h2>
+<h2>La linea general de alimentación es la parte de la instalación que une la caja general de protección con los equipos de medida</h2>
+<h2>Cuando solo hay un usuario no existe la línea general de alimentación solamente existe la derivación individual.</h2>
+<h1>Caja general de protección</h1>
+<h2>Alojan los fusibles de protección de la línea general de alimentación.</h2>
+<h2>Se instalarán a una altura entre 3 y 4 metros, serán de superficie si la acometida es aérea y empotrada cuando sea subterránea.</h2>
+<h2>Cuando sea subterránea se instalará en un nicho en la pared a una altura mínima de 30cm del suelo.</h2>
+<h2>Se situará en el límite de la propiedad colindando con la propiedad pública.</h2>
+<h2>Cuando suministre a uno o dos usuarios podrá colocarse un elemento que englobe la caja general de protección y la caja de medida,
+    denominandose caja de protección y medida. La altura de los contadores estará entre 0,7 y 1,8m.</h2>
+
+</div>
+{% endblock %}
+

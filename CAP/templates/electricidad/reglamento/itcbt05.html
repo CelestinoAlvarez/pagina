@@ -1,0 +1,44 @@
+{% extends 'plantillas/resumen.html' %}
+
+{% load static %}
+{% block titulo %} Reglamento Electrotécnico de Baja Tensión REBT {% endblock %}
+{% block css %}
+<link href="{% static 'css/electricidad/reglamento/reglamento.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/programacion/programacion.js' %}"></script>
+{% endblock %}
+
+{% block menu %}
+
+{% endblock %}
+
+
+{% block contenido %}
+<div id="contenido">
+    <h1>Inspecciones</h1>
+    <h2>Iniciales y periódicas</h2>
+    <h1>Instalaciones que precisan inspección inicial</h1>
+    <ul>
+        <li>Instalaciones que precisen proyecto cuya potencia instalada sea superior a 100kW.</li>
+        <li>Locales de pública concurrencia.</li>
+        <li>Locales con riesgo de incendio o explosión de clase I, excepto garajes de menos de 25 plazas.</li>
+        <li>Locales mojados con potencia instalada superior a 25kW.</li>
+        <li>Piscinas con potencia superior a 10kW.</li>
+        <li>Quirófanos y salas de intervención.</li>
+        <li>Instalaciones de alumbrado exterior con potencia instalada superior a 5kW.</li>
+    </ul>
+    <h1>Instalaciones que necesitan inspección periódica</h1>
+    <h2>Aquellas que necesitan inspección inicial cada 5 años y los edificios de viviendas con potencia superior a 100kW cada 10 años.</h2>
+    <h1>Resultados de inspección</h1>
+    <ul>
+        <li>Favorable, pueden existir defectos favorables.</li>
+        <li>Condicionada, existe al menos un defecto grave o defectos leves no subsanados de la inspección anterior. Habrá 6 meses para resolverlo.</li>
+        <li>Negativa, se emitirá un certificado negativo.</li>
+    </ul>
+    <h2>Con cualquier defecto una instalación nueva no podrá ser puesta en servicio.</h2>
+</div>
+{% endblock %}
+

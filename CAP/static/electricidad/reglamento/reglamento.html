@@ -1,0 +1,917 @@
+{% load static %}
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Formularios</title>
+    <script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'js/electricidad/reglamento/reglamento.js' %}"></script>
+    <link href="{% static 'css/electricidad/reglamento/reglamento.css' %}" rel="stylesheet" type="text/css" />
+    <style>
+
+    </style>
+    <script>
+    </script>
+</head>
+
+<body>
+    <div id="encabezado">
+        <table id="tablaEncabezado">
+            <tr>
+                <td style="text-align: left;">
+                    <p id="logo">CAP<span>prog</span></p>
+                </td>
+
+                <td style="text-align: center;">
+                    <p id="nombre">REBT</p>
+                </td>
+
+                <td style="text-align: right;">
+                    <p id="botonSalir"><a href="/electricidad"> <img
+                                src="{% static 'img/iconos/salirVentanaBlanco.png' %}""></span></p></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+<div id=" contenedor">
+                            <div id="menu">
+                                <div id="seleccionITC">
+                                    <div id="imgSeleccionITCMas">
+                                        <img src="{% static 'img/iconos/mas.png' %}">
+                                    </div>
+                                    <div id="imgSeleccionITCMenos">
+                                        <img src="{% static 'img/iconos/menos.png' %}">
+                                    </div>
+                                    <p>ORDENADO POR ITC</p>
+                                </div>
+
+                                <div id="ordenadoPorITC">
+                                    <div class="lineaITC">
+                                        <p>GUÍA-BT-RD 842/02 - GUÍA TÉCNICA DE APLICACIÓN: REGLAMENTO ELECTROTÉCNICO
+                                            PARA BAJA TENSIÓN;
+                                            ASPECTOS GENERALES. REAL DECRETO 842/2002</p>
+                                            <button id="btResumenGUIABTRD" class="btrebtITC">RESUMEN</button>
+                                            <button id="btGUIABTRD" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>GUÍA-BT - INDICE</p>
+                                        <button id="btResumenGUIABTIndice" class="btrebtITC">RESUMEN</button>
+                                        <button id="btGUIABTINDICE" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-01 - DEFINICIONES</p>
+                                        <button id="btITCBT01" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-02 - NORMATIVA DE REFERENCIA</p>
+                                        <button id="btITCBT02" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-03 - INSTALADORES AUTORIZADOS EN BAJA TENSIÓN</p>
+                                        <button id="btGUIABT03" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-04 - DOCUMENTACIÓN Y PUESTA EN SERVICIO DE INSTALACIONES</p>
+                                        <button id="btResumenITCBT04" class="btrebtITC">RESUMEN</button>
+                                        <button id="btGUIABT04" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-05 - VERIFICACIONES E INSPECCIONES</p>
+                                        <button id="btResumenITCBT05" class="btrebtITC">RESUMEN</button>
+                                        <button id="btGUIABT05" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-06 - REDES AEREAS PARA DISTRIBUCIÓN EN BAJA TENSIÓN</p>
+                                        <button id="btResumenITCBT06" class="btrebtITC">RESUMEN</button>
+                                        <button id="btITCBT06" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-07 - REDES SUBTERRÁNEAS PARA DISTRIBUCIÓN EN BAJA TENSIÓN</p>
+                                        <button id="btITCBT07" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-08 - SISTEMAS DE CONEXIÓN DE NEUTRO Y DE LAS MASAS EN REDES DE
+                                            DISTRIBUCIÓN</p>
+                                        <button id="btGUIABT08" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-09 - INSTALACIONES DE ALUMBRADO EXTERIOR</p>
+                                        <button id="btResumenITCBT09" class="btrebtITC">RESUMEN</button>
+                                        <button id="btGUIABT09" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-10 - PREVISIÓN DE CARGAS PARA SUMINISTROS EN BAJA TENSIÓN</p>
+                                        <button id="btGUIABT10" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-11 - REDES DE DISTRIBUCIÓN DE ENERGÍA ELÉCTRICA.ACOMETIDAS</p>
+                                        <button id="btITCBT11" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-12 - INSTALACIONES DE ENLACE. ESQUEMAS</p>
+                                        <button id="btGUIABT12" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-13 - INSTALACIONES DE ENLACE. CAJAS GENERALES DE PROTECCIÓN</p>
+                                        <button id="btGUIABT13" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-14 - INSTALACIONES DE ENLACE. LÍNEA GENERAL DE ALIMENTACIÓN</p>
+                                        <button id="btGUIABT14" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-15 - INSTALACIONES DE ENLACE. DERIVACIONES INDIVIDUALES</p>
+                                        <button id="btGUIABT15" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-16 - INSTALACIONES DE ENLACE. CONTADORES:UBICACIÓN Y SISTEMAS DE
+                                            INSTALACIÓN</p>
+                                        <button id="btGUIABT16" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-17 - INSTALACIONES DE ENLACE. DISPOSITIVOS GENERALES E INDIVIDUALES DE
+                                            MANDO Y PROTECCIÓN. INTERRUPTOR DE CONTROL DE POTENCIA</p>
+                                        <button id="btGUIABT17" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-18 - INSTALACIONES DE PUESTA A TIERRA</p>
+                                        <button id="btGUIABT18" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-19 - INSTALACIONES INTERIORES O RECEPTORAS. PRESCRIPCIONES GENERALES
+                                        </p>
+                                        <button id="btGUIABT19" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-20 - INSTALACIONES INTERIORES O RECEPTORAS. SISTEMAS DE INSTALACION
+                                        </p>
+                                        <button id="btGUIABT20" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-21 - INSTALACIONES INTERIORES O RECEPTORAS. TUBOS Y CANALES
+                                            PROTECTORAS</p>
+                                        <button id="btGUIABT21" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-22 - INSTALACIONES INTERIORES O RECEPTORAS. PROTECCION CONTRA
+                                            SOBREINTENSIDADES</p>
+                                        <button id="btGUIABT22" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-23 - INSTALACIONES INTERIORES O RECEPTORAS. PROTECCIÓN CONTRA
+                                            SOBRETENSIONES</p>
+                                        <button id="btGUIABT23" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-24 - INSTALACIONES INTERIORES O RECEPTORAS. PROTECCIÓN CONTRA LOS
+                                            CONTACTOS DIRECTOS E INDIRECTOS</p>
+                                        <button id="btGUIABT24" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-25 - INSTALACIONES INTERIORES EN VIVIENDAS. NÚMERO DE CIRCUITOS Y
+                                            CARACTERÍSTICAS</p>
+                                        <button id="btGUIABT25" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-26 - INSTALACIONES INTERIORES EN VIVIENDAS. PRESCRIPCIONES GENERALES
+                                            DE INSTALACIÓN</p>
+                                        <button id="btGUIABT26" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-27 - INSTALACIONES INTERIORES EN VIVIENDAS. LOCALES QUE CONTIENEN UNA
+                                            DUCHA O BAÑERA</p>
+                                        <button id="btGUIABT27" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-28 - INSTALACIONES EN LOCALES DE PÚBLICA CONCURRENCIA</p>
+                                        <button id="btGUIABT28" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-29 - PRESCRIPCIONES PARTICULARES PARA LAS INSTALACIONES ELÉCTRICAS DE
+                                            LOS LOCALES CON RIESGO DE INCENDIO O EXPLOSIÓN</p>
+                                        <button id="btGUIABT29" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-30 - INSTALACIONES EN LOCALES DE CARACTERÍSTICAS ESPECIALES</p>
+                                        <button id="btGUIABT30" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-31 - INSTALACIONES CON FINES ESPECIALES. PISCINAS Y FUENTES</p>
+                                        <button id="btITCBT31" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-32 - INSTALACIONES CON FINES ESPECIALES. MÁQUINA DE ELEVACIÓN Y
+                                            TRANSPORTE</p>
+                                        <button id="btITCBT32" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-33 - INSTALACIONES CON FINES ESPECIALES. INSTALACIONES PROVISIONALES Y
+                                            TEMPORALES DE OBRAS</p>
+                                        <button id="btGUIABT33" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-34 - INSTALACIONES CON FINES ESPECIALES. FERIAS Y STANDS</p>
+                                        <button id="btITCBT34" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-35 - INSTALACIONES CON FINES ESPECIALES. ESTABLECIMIENTOS AGRÍCOLAS Y
+                                            HORTÍCOLAS</p>
+                                        <button id="btITCBT35" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-36 - INSTALACIONES A MUY BAJA TENSIÓN</p>
+                                        <button id="btITCBT36" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-37 - INSTALACIONES A TENSIONES ESPECIALES</p>
+                                        <button id="btITCBT37" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-38 - INSTALACIONES CON FINES ESPECIALES. REQUISITOS PARTICULARES PARA
+                                            LA INSTALACIÓN ELÉCTRICA EN QUIRÓFANOS Y SALAS DE INTERVENCIÓN</p>
+                                        <button id="btITCBT38" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-39 - INSTALACIONES CON FINES ESPECIALES. CERCAS ELÉCTRICAS PARA GANADO
+                                        </p>
+                                        <button id="btITCBT39" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-40 - INSTALACIONES GENERADORAS DE BAJA TENSIÓN</p>
+                                        <button id="btGUIABT40" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-41 - INSTALACIONES ELÉCTRICAS EN CARAVANAS Y PARQUES DE CARAVANAS</p>
+                                        <button id="btITCBT41" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-42 - INSTALACIONES ELÉCTRICAS EN AEROPUERTOS Y MARINAS PARA BARCOS DE
+                                            RECREO</p>
+                                        <button id="btITCBT42" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-43 - INSTALACIÓN DE RECEPTORES. PRESCRIPCIONES GENERALES</p>
+                                        <button id="btITCBT43" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-44 - INSTALACIÓN DE RECEPTORES. RECEPTORES DE ALUMBRADO</p>
+                                        <button id="btITCBT44" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-45 - INSTALACIÓN DE RECEPTORES. APARATOS DE CALDEO</p>
+                                        <button id="btITCBT45" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-46 - INSTALACIÓN DE RECEPTORES. CABLES Y FOLIOS RADIANTES EN VIVIENDAS
+                                        </p>
+                                        <button id="btITCBT46" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-47 - INSTALACIÓN DE RECEPTORES. MOTORES</p>
+                                        <button id="btITCBT47" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-48 - INSTALACIÓN DE RECEPTORES. TRANSFORMADORES. REACTANCIAS Y
+                                            RECTIFICADORES, CONDENSADORES</p>
+                                        <button id="btITCBT48" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-49 - INSTALACIONES ELÉCTRICAS EN MUEBLES</p>
+                                        <button id="btGUIABT49" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-50 - INSTALACIONES ELÉCTRICAS EN LOCALES QUE CONTIENEN RADIADORES PARA
+                                            SAUNAS</p>
+                                        <button id="btITCBT50" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-51 - INSTALACIONES DE SISTEMAS DE AUTOMATIZACIÓN, GESTIÓN TÉCNICA DE
+                                            LA ENERGÍA Y EDIFICIOS</p>
+                                        <button id="btGUIABT51" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>ITC-BT-52 - INSTALACIONES CON FINES ESPECIALES. INFRAESTRUCTURA PARA LA
+                                            RECARGA DE VEHÍCULOS ELÉCTRICOS</p>
+                                        <button id="btITCBT52" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>GUÍA-BT-ANEXO1 - SIGNIFICADO Y EXPLICACIÓN DE LOS CÓDIGOS IP, IK</p>
+                                        <button id="btGUIAANEXO1" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>GUÍA-BT-ANEXO2 - CÁLCULO DE LAS CAÍDAS DE TENSIÓN</p>
+                                        <button id="btGUIAANEXO2" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>GUÍA-BT-ANEXO3 - CÁLCULO DE CORRIENTES DE CORTOCIRCUITO</p>
+                                        <button id="btGUIAANEXO3" class="btrebtITC">PDF</button>
+                                    </div>
+
+                                    <div class="lineaITC">
+                                        <p>GUÍA-BT-ANEXO4 - VERIFICACIÓN DE LAS INSTALACIONES ELÉCTRICAS</p>
+                                        <button id="btGUIAANEXO4" class="btrebtITC">PDF</button>
+                                    </div>
+                                </div>
+
+                                <div id="seleccionTemas">
+                                    <div id="imgSeleccionTemasMas">
+                                        <img src="{% static 'img/iconos/mas.png' %}">
+                                    </div>
+                                    <div id="imgSeleccionTemasMenos">
+                                        <img src="{% static 'img/iconos/menos.png' %}">
+                                    </div>
+                                    <p>ORDENADO POR TEMAS</p>
+                                </div>
+
+                                <div id="ordenadoPorTemas">
+                                    <!-- Permite ocultar todo la zona de temas-->
+
+                                    <div class="btnTemas" id="temasIntroduccion">    <!--//Botón introducción e índice -->
+                                        <div id="imgIntroduccionMas">
+                                            <img src="{% static 'img/iconos/mas.png' %}">
+                                        </div>
+                                        <div id="imgIntroduccionMenos">
+                                            <img src="{% static 'img/iconos/menos.png' %}">
+                                        </div>
+                                        <p>Introducción e índice</p>
+                                    </div>
+
+                                    <div id="opcionesIntroduccion">
+                                        <div class="lineaITC">
+                                            <p>GUÍA-BT - INDICE</p>
+                                            <button id="btGUIABTINDICETemas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-01 - DEFINICIONES</p>
+                                            <button id="btITCBT01Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-02 - NORMATIVA DE REFERENCIA</p>
+                                            <button id="btITCBT02Temas" class="btrebtITC">PDF</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="btnTemas" id="temasAspectosGenerales">    <!--//Boton Aspectos Generales-->
+                                        <div id="imgAspectosGeneralesMas">
+                                            <img src="{% static 'img/iconos/mas.png' %}">
+                                        </div>
+                                        <div id="imgAspectosGeneralesMenos">
+                                            <img src="{% static 'img/iconos/menos.png' %}">
+                                        </div>
+                                        <p>Aspectos generales</p>
+                                    </div>
+
+                                    <div id="opcionesAspectosGenerales">
+                                        <div class="lineaITC">
+                                            <p>GUÍA-BT-RD 842/02 - GUÍA TÉCNICA DE APLICACIÓN: REGLAMENTO ELECTROTÉCNICO
+                                                PARA BAJA TENSIÓN;
+                                                ASPECTOS GENERALES. REAL DECRETO 842/2002</p>
+                                            <button id="btGUIABTRDTemas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-03 - INSTALADORES AUTORIZADOS EN BAJA TENSIÓN</p>
+                                            <button id="btGUIABT03Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-04 - DOCUMENTACIÓN Y PUESTA EN SERVICIO DE INSTALACIONES</p>
+                                            <button id="btGUIABT04Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-05 - VERIFICACIONES E INSPECCIONES</p>
+                                            <button id="btGUIABT05Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="btnTemas" id="temasRedesAereas">  <!--//Botón de agrupacion de Redes aéreas-->
+                                        <div id="imgRedesAereasMas">
+                                            <img src="{% static 'img/iconos/mas.png' %}">
+                                        </div>
+                                        <div id="imgRedesAereasMenos">
+                                            <img src="{% static 'img/iconos/menos.png' %}">
+                                        </div>
+                                        <p>Redes aéreas de distribución</p>
+                                    </div>
+
+                                    <div id="opcionesRedesAereas">
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-06 - REDES AEREAS PARA DISTRIBUCIÓN EN BAJA TENSIÓN</p>
+                                            <button id="btITCBT06Temas" class="btrebtITC">PDF</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="btnTemas" id="temasRedesSubterraneas">     <!--//Botón de agrupación redes subterráneas-->
+                                        <div id="imgRedesSubterraneasMas">
+                                            <img src="{% static 'img/iconos/mas.png' %}">
+                                        </div>
+                                        <div id="imgRedesSubterraneasMenos">
+                                            <img src="{% static 'img/iconos/menos.png' %}">
+                                        </div>
+                                        <p>Redes subterráneas de distribución</p>
+                                    </div>
+
+                                    <div id="opcionesRedesSubterraneas">
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-07 - REDES SUBTERRÁNEAS PARA DISTRIBUCIÓN EN BAJA TENSIÓN</p>
+                                            <button id="btITCBT07Temas" class="btrebtITC">PDF</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="btnTemas" id="temasInstalacionesEnlace">    <!--//Boton Instalaciones de Enlace-->
+                                        <div id="imgInstalacionesEnlaceMas">
+                                            <img src="{% static 'img/iconos/mas.png' %}">
+                                        </div>
+                                        <div id="imgInstalacionesEnlaceMenos">
+                                            <img src="{% static 'img/iconos/menos.png' %}">
+                                        </div>
+                                        <p>Instalaciones de enlace</p>
+                                    </div>
+
+                                    <div id="opcionesInstalacionesEnlace">
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-10 - PREVISIÓN DE CARGAS PARA SUMINISTROS EN BAJA TENSIÓN</p>
+                                            <button id="btGUIABT10Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-11 - REDES DE DISTRIBUCIÓN DE ENERGÍA ELÉCTRICA.ACOMETIDAS</p>
+                                            <button id="btITCBT11Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-12 - INSTALACIONES DE ENLACE. ESQUEMAS</p>
+                                            <button id="btGUIABT12Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-13 - INSTALACIONES DE ENLACE. CAJAS GENERALES DE PROTECCIÓN</p>
+                                            <button id="btGUIABT13Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-14 - INSTALACIONES DE ENLACE. LÍNEA GENERAL DE ALIMENTACIÓN</p>
+                                            <button id="btGUIABT14Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-15 - INSTALACIONES DE ENLACE. DERIVACIONES INDIVIDUALES</p>
+                                            <button id="btGUIABT15Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-16 - INSTALACIONES DE ENLACE. CONTADORES:UBICACIÓN Y SISTEMAS DE
+                                                INSTALACIÓN</p>
+                                            <button id="btGUIABT16Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-17 - INSTALACIONES DE ENLACE. DISPOSITIVOS GENERALES E
+                                                INDIVIDUALES DE
+                                                MANDO Y PROTECCIÓN. INTERRUPTOR DE CONTROL DE POTENCIA</p>
+                                            <button id="btGUIABT17Temas" class="btrebtITC">PDF</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="btnTemas" id="temasInstalacionesInteriores">   <!--//Boton InstalacionesInteriores-->
+                                        <div id="imgInstalacionesInterioresMas">
+                                            <img src="{% static 'img/iconos/mas.png' %}">
+                                        </div>
+                                        <div id="imgInstalacionesInterioresMenos">
+                                            <img src="{% static 'img/iconos/menos.png' %}">
+                                        </div>
+                                        <p>Instalaciones interiores</p>
+                                    </div>
+
+                                    <div id="opcionesInstalacionesInteriores">
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-19 - INSTALACIONES INTERIORES O RECEPTORAS. PRESCRIPCIONES
+                                                GENERALES
+                                            </p>
+                                            <button id="btGUIABT19Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-20 - INSTALACIONES INTERIORES O RECEPTORAS. SISTEMAS DE
+                                                INSTALACION
+                                            </p>
+                                            <button id="btGUIABT20Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-21 - INSTALACIONES INTERIORES O RECEPTORAS. TUBOS Y CANALES
+                                                PROTECTORAS</p>
+                                            <button id="btGUIABT21Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-25 - INSTALACIONES INTERIORES EN VIVIENDAS. NÚMERO DE CIRCUITOS Y
+                                                CARACTERÍSTICAS</p>
+                                            <button id="btGUIABT25Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-26 - INSTALACIONES INTERIORES EN VIVIENDAS. PRESCRIPCIONES
+                                                GENERALES
+                                                DE INSTALACIÓN</p>
+                                            <button id="btGUIABT26Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-27 - INSTALACIONES INTERIORES EN VIVIENDAS. LOCALES QUE CONTIENEN
+                                                UNA
+                                                DUCHA O BAÑERA</p>
+                                            <button id="btGUIABT27Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-49 - INSTALACIONES ELÉCTRICAS EN MUEBLES</p>
+                                            <button id="btGUIABT49Temas" class="btrebtITC">PDF</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="btnTemas" id="temasPublicaConcurrencia">    <!--//Boton Pública concurrencia-->
+                                        <div id="imgPublicaConcurrenciaMas">
+                                            <img src="{% static 'img/iconos/mas.png' %}">
+                                        </div>
+                                        <div id="imgPublicaConcurrenciaMenos">
+                                            <img src="{% static 'img/iconos/menos.png' %}">
+                                        </div>
+                                        <p>Locales de pública concurrencia</p>
+                                    </div>
+
+                                    <div id="opcionesPublicaConcurrencia">
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-28 - INSTALACIONES EN LOCALES DE PÚBLICA CONCURRENCIA</p>
+                                            <button id="btGUIABT28Temas" class="btrebtITC">PDF</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="btnTemas" id="temasAlumbradoExterior">
+                                        <!--//Boton Alumbrado exterior-->
+                                        <div id="imgAlumbradoExteriorMas">
+                                            <img src="{% static 'img/iconos/mas.png' %}">
+                                        </div>
+                                        <div id="imgAlumbradoExteriorMenos">
+                                            <img src="{% static 'img/iconos/menos.png' %}">
+                                        </div>
+                                        <p>Instalaciones de alumbrado exterior</p>
+                                    </div>
+
+                                    <div id="opcionesAlumbradoExterior">
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-09 - INSTALACIONES DE ALUMBRADO EXTERIOR</p>
+                                            <button id="btGUIABT09Temas" class="btrebtITC">PDF</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="btnTemas" id="temasProtecciones">
+                                        <!--//Botón protecciones-->
+                                        <div id="imgProteccionesMas">
+                                            <img src="{% static 'img/iconos/mas.png' %}">
+                                        </div>
+                                        <div id="imgProteccionesMenos">
+                                            <img src="{% static 'img/iconos/menos.png' %}">
+                                        </div>
+                                        <p>Protecciones</p>
+                                    </div>
+
+                                    <div id="opcionesProtecciones">
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-08 - SISTEMAS DE CONEXIÓN DE NEUTRO Y DE LAS MASAS EN REDES DE
+                                                DISTRIBUCIÓN</p>
+                                            <button id="btGUIABT08Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-18 - INSTALACIONES DE PUESTA A TIERRA</p>
+                                            <button id="btGUIABT18Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-22 - INSTALACIONES INTERIORES O RECEPTORAS. PROTECCION CONTRA
+                                                SOBREINTENSIDADES</p>
+                                            <button id="btGUIABT22Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-23 - INSTALACIONES INTERIORES O RECEPTORAS. PROTECCIÓN CONTRA
+                                                SOBRETENSIONES</p>
+                                            <button id="btGUIABT23Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-24 - INSTALACIONES INTERIORES O RECEPTORAS. PROTECCIÓN CONTRA LOS
+                                                CONTACTOS DIRECTOS E INDIRECTOS</p>
+                                            <button id="btGUIABT24Temas" class="btrebtITC">PDF</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="btnTemas" id="temasInstalacionesDomoticas">
+                                        <!--//Boton domóticas-->
+                                        <div id="imgInstalacionesDomoticasMas">
+                                            <img src="{% static 'img/iconos/mas.png' %}">
+                                        </div>
+                                        <div id="imgInstalacionesDomoticasMenos">
+                                            <img src="{% static 'img/iconos/menos.png' %}">
+                                        </div>
+                                        <p>Instalaciones domóticas</p>
+                                    </div>
+
+                                    <dir id="opcionesInstalacionesDomoticas">
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-51 - INSTALACIONES DE SISTEMAS DE AUTOMATIZACIÓN, GESTIÓN TÉCNICA
+                                                DE
+                                                LA ENERGÍA Y EDIFICIOS</p>
+                                            <button id="btGUIABT51Temas" class="btrebtITC">PDF</button>
+                                        </div>
+                                    </dir>
+
+                                    <div class="btnTemas" id="temasInstalacionesEspeciales">   <!--//Boton Instalaciones Especiales-->
+                                        <div id="imgInstalacionesEspecialesMas">
+                                            <img src="{% static 'img/iconos/mas.png' %}">
+                                        </div>
+                                        <div id="imgInstalacionesEspecialesMenos">
+                                            <img src="{% static 'img/iconos/menos.png' %}">
+                                        </div>
+                                        <p>Instalaciones especiales</p>
+                                    </div>
+
+                                    <dir id="opcionesInstalacionesEspeciales">
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-29 - PRESCRIPCIONES PARTICULARES PARA LAS INSTALACIONES ELÉCTRICAS
+                                                DE
+                                                LOS LOCALES CON RIESGO DE INCENDIO O EXPLOSIÓN</p>
+                                            <button id="btGUIABT29Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-30 - INSTALACIONES EN LOCALES DE CARACTERÍSTICAS ESPECIALES</p>
+                                            <button id="btGUIABT30Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-33 - INSTALACIONES CON FINES ESPECIALES. INSTALACIONES
+                                                PROVISIONALES Y
+                                                TEMPORALES DE OBRAS</p>
+                                            <button id="btGUIABT33Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-40 - INSTALACIONES GENERADORAS DE BAJA TENSIÓN</p>
+                                            <button id="btGUIABT40Temas" class="btrebtITC">PDF</button>
+                                        </div>
+                                    </dir>
+
+                                    <div class="btnTemas" id="temasFinesEspeciales">
+                                        <!--//Botón con fines especiales-->
+                                        <div id="imgFinesEspecialesMas">
+                                            <img src="{% static 'img/iconos/mas.png' %}">
+                                        </div>
+                                        <div id="imgFinesEspecialesMenos">
+                                            <img src="{% static 'img/iconos/menos.png' %}">
+                                        </div>
+                                        <p>Instalaciones con fines especiales</p>
+                                    </div>
+
+                                    <dir id="opcionesFinesEspeciales">
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-31 - INSTALACIONES CON FINES ESPECIALES. PISCINAS Y FUENTES</p>
+                                            <button id="btITCBT31Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-32 - INSTALACIONES CON FINES ESPECIALES. MÁQUINA DE ELEVACIÓN Y
+                                                TRANSPORTE</p>
+                                            <button id="btITCBT32Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-34 - INSTALACIONES CON FINES ESPECIALES. FERIAS Y STANDS</p>
+                                            <button id="btITCBT34Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-35 - INSTALACIONES CON FINES ESPECIALES. ESTABLECIMIENTOS
+                                                AGRÍCOLAS Y
+                                                HORTÍCOLAS</p>
+                                            <button id="btITCBT35Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-38 - INSTALACIONES CON FINES ESPECIALES. REQUISITOS PARTICULARES
+                                                PARA
+                                                LA INSTALACIÓN ELÉCTRICA EN QUIRÓFANOS Y SALAS DE INTERVENCIÓN</p>
+                                            <button id="btITCBT38Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-39 - INSTALACIONES CON FINES ESPECIALES. CERCAS ELÉCTRICAS PARA
+                                                GANADO
+                                            </p>
+                                            <button id="btITCBT39Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-41 - INSTALACIONES ELÉCTRICAS EN CARAVANAS Y PARQUES DE CARAVANAS
+                                            </p>
+                                            <button id="btITCBT41Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-42 - INSTALACIONES ELÉCTRICAS EN AEROPUERTOS Y MARINAS PARA BARCOS
+                                                DE
+                                                RECREO</p>
+                                            <button id="btITCBT42Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-50 - INSTALACIONES ELÉCTRICAS EN LOCALES QUE CONTIENEN RADIADORES
+                                                PARA
+                                                SAUNAS</p>
+                                            <button id="btITCBT50Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-52 - INSTALACIONES CON FINES ESPECIALES. INFRAESTRUCTURA PARA LA
+                                                RECARGA DE VEHÍCULOS ELÉCTRICOS</p>
+                                            <button id="btITCBT52Temas" class="btrebtITC">PDF</button>
+                                        </div>
+                                    </dir>
+
+                                    <div class="btnTemas" id="temasTensionesEspeciales">   <!--//Botón Instalaciones tensiones especiales-->
+                                        <div id="imgTensionesEspecialesMas">
+                                            <img src="{% static 'img/iconos/mas.png' %}">
+                                        </div>
+                                        <div id="imgTensionesEspecialesMenos">
+                                            <img src="{% static 'img/iconos/menos.png' %}">
+                                        </div>
+                                        <p>Tensiones especiales</p>
+                                    </div>
+
+                                    <dir id="opcionesTensionesEspeciales">
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-36 - INSTALACIONES A MUY BAJA TENSIÓN</p>
+                                            <button id="btITCBT36Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-37 - INSTALACIONES A TENSIONES ESPECIALES</p>
+                                            <button id="btITCBT37Temas" class="btrebtITC">PDF</button>
+                                        </div>
+                                    </dir>
+
+                                    <div class="btnTemas" id="temasInstalacionesReceptoras">    <!--//Botón Instalaciones Receptoras-->
+                                        <div id="imgInstalacionesReceptorasMas">
+                                            <img src="{% static 'img/iconos/mas.png' %}">
+                                        </div>
+                                        <div id="imgInstalacionesReceptorasMenos">
+                                            <img src="{% static 'img/iconos/menos.png' %}">
+                                        </div>
+                                        <p>Instalación de receptores</p>
+                                    </div>
+
+                                    <div id="opcionesInstalacionesReceptoras">
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-43 - INSTALACIÓN DE RECEPTORES. PRESCRIPCIONES GENERALES</p>
+                                            <button id="btITCBT43Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-44 - INSTALACIÓN DE RECEPTORES. RECEPTORES DE ALUMBRADO</p>
+                                            <button id="btITCBT44Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-45 - INSTALACIÓN DE RECEPTORES. APARATOS DE CALDEO</p>
+                                            <button id="btITCBT45Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-46 - INSTALACIÓN DE RECEPTORES. CABLES Y FOLIOS RADIANTES EN
+                                                VIVIENDAS
+                                            </p>
+                                            <button id="btITCBT46Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-47 - INSTALACIÓN DE RECEPTORES. MOTORES</p>
+                                            <button id="btITCBT47Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>ITC-BT-48 - INSTALACIÓN DE RECEPTORES. TRANSFORMADORES. REACTANCIAS Y
+                                                RECTIFICADORES, CONDENSADORES</p>
+                                            <button id="btITCBT48Temas" class="btrebtITC">PDF</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="btnTemas" id="temasAnexos">    <!--//Botón Anexos-->
+                                        <div id="imgAnexosMas">
+                                            <img src="{% static 'img/iconos/mas.png' %}">
+                                        </div>
+                                        <div id="imgAnexosMenos">
+                                            <img src="{% static 'img/iconos/menos.png' %}">
+                                        </div>
+                                        <p>Anexos</p>
+                                    </div>
+
+                                    <div id="opcionesAnexos">
+                                        <div class="lineaITC">
+                                            <p>GUÍA-BT-ANEXO1 - SIGNIFICADO Y EXPLICACIÓN DE LOS CÓDIGOS IP, IK</p>
+                                            <button id="btGUIAANEXO1Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>GUÍA-BT-ANEXO2 - CÁLCULO DE LAS CAÍDAS DE TENSIÓN</p>
+                                            <button id="btGUIAANEXO2Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>GUÍA-BT-ANEXO3 - CÁLCULO DE CORRIENTES DE CORTOCIRCUITO</p>
+                                            <button id="btGUIAANEXO3Temas" class="btrebtITC">PDF</button>
+                                        </div>
+
+                                        <div class="lineaITC">
+                                            <p>GUÍA-BT-ANEXO4 - VERIFICACIÓN DE LAS INSTALACIONES ELÉCTRICAS</p>
+                                            <button id="btGUIAANEXO4Temas" class="btrebtITC">PDF</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div id="escritorio"  style='margin:auto; margin-top:40px'>
+                                <!-- <embed src="{% static 'documents/rebt/ITCBT01.pdf' %}" type="application/pdf" width="100%" height="1500px" />-->
+                                <!--<iframe id="ventana" style="margin: auto;" src="electricidad/reglamento.guiabtrd.html"></iframe> -->
+
+                            </div>
+    </div>
+    </style>
+
+</html>

@@ -1,0 +1,36 @@
+{% extends 'plantillas/baseWeb.html' %}
+
+{% load static %}
+{% block titulo %} Programación, Electricidad, Automatización {% endblock %}
+{% block css %}
+<link href="{% static 'css/automatizacion/automatizacion.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/automatizacion/automatizacion.js' %}"></script>
+{% endblock %}
+
+{% block menu %}
+<div id="barraMenu">
+  <button id="btInicio" class="botonMenu">Inicio</button>
+  <button id="btProgramacion" class="botonMenu">Programación</button>
+  <button id="btAutomatizacion" class="botonAutomatizacion">Automatización</button>
+  <button id="btElectricidad" class="botonMenu">Electricidad</button>
+</div>
+{% endblock %}
+
+
+{% block contenido %}
+</div class="contenido">
+
+<br>  <br>  <br>  <br>  <br>  <br>
+
+ <p  style="font-size: 36px; text-align: center;">PAGINA EN CONSTRUCCIÓN</p>
+ <p style="font-size: 36px; text-align: center;">AUTOMATIZACIÓN</p>
+ <br>  <br>  <br>  <br>  <br>  <br>
+
+</div>
+{% endblock %}
+
+

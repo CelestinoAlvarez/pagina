@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+{% block contenido %}
+    <table>
+        <thead>
+            <td>Código</td>
+            <td>Nombre</td>
+            <td>Dirección</td>
+            <td>Población</td>
+            <td>CP</td>
+            <td>Provincia</td>
+            <td>Accion</td>
+        </thead>
+        {% if object_list %}
+        {% for obra in object_list %}
+        <tbody>
+            <td>{{obra.id}}</td>
+            <td>{{obra.nombre}}</td>
+            <td>{{obra.direccion}}</td>
+            <td>{{obra.poblacion}}</td>
+            <td>{{obra.cp}}</td>
+            <td>{{obra.provincia}}</td>
+            <td><a href="{% url 'editar_obra' obra.id %}">Editar</a></td>
+            <td><a href="{% url 'editar_obra' obra.id %}">Eliminar</a></td>
+        </tbody>
+        {% endfor %}
+        {% else %}
+        <p>No hay registros</p>
+        {% endif %}
+    </table>
+        {% endblock %}
+</body>
+</html>

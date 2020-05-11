@@ -1,0 +1,72 @@
+{% extends 'plantillas/baseWeb.html' %}
+
+{% load static %}
+{% block titulo %} Programación, Electricidad, Automatización {% endblock %}
+{% block css %}
+<link href="{% static 'css/principal/principal.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/principal/principal.js' %}"></script>
+{% endblock %}
+
+{% block menu %}
+<div id="barraMenu">
+    <button id="btInicio" class="botonInicio">Inicio</button>
+    <button id="btProgramacion" class="botonMenu">Programación</button>
+    <button id="btAutomatizacion" class="botonMenu">Automatización</button>
+    <button id="btElectricidad" class="botonMenu">Electricidad</button>
+  </div>
+{% endblock %}
+
+{% block contenido %}
+<div>
+<h1>Actualidad del software</h1>
+<p class="parrafo">
+  <img class="fotoDerecha" src="{% static 'img/principal/Programas.jpg' %}">
+  La inmensa mayoria del software instalado ha sido fabricado para un tipo de sistema operativo en particular,
+  instalado en un ordenador de escritorio o bien en un
+  servidor disponible en nuestra empresa.
+  Si esta es tu situación, estás como la inmensa mayoría de los usuarios, con los problemas tecnológicos que todo el
+  mundo tiene. </p>
+
+<p class="caracteristicas">
+  Cuales son tus ventajas.
+</p>
+
+<img class="fotoIzquierda" src="{% static 'img/principal/Servidor.jpg' %}">
+<ul class="listaDerecha">
+  <li>Tienes unos equipos de calidad, ya que deben ser potentes para correr tu software.</li>
+  <li>Una inversión considerable en productos, tanto software como hardware que puedes enseñar a tus clientes.</li>
+  <li>Tienes los datos de tu empresa guardados a salvo de la competencia.</li>
+</ul>
+
+<p class="caracteristicas" style="margin-top: 30px;">¿Y los inconvenientes?</p>
+
+<img class="fotoDerecha" src="{% static 'img/principal/perdidaDinero.jpg' %}">
+<ul class="listaIzquierda">
+  <li>Mis buenos equipos me están consumiendo energía, si tengo un servidor estará continuamente conectado.</li>
+  <li>Cada vez que tienes que cambiar los equipos, hay que llamar al técnico para que me instale y configure las
+    aplicaciones.</li>
+  <li>Si tengo un servidor y se avería, me quedan todos los equipos fuera de servicio.</li>
+  <li>Virus y demás software malicioso que nos puede hacer pasar un mal rato.</li>
+  <li>Además de muchos otros problemas que seguro te han pasado o pasarán y que no se me ocurren.</li>
+</ul>
+
+
+<p class="parrafo">
+  ¿Es posible aumentar las ventajas y disminuir los inconvenientes? Actualmente "SI"  
+</p>
+<p class="parrafo">
+  Como es lo que pretendo mostrarte.
+  Mostramos en esta web el presente y futuro de la programación.
+  Independiente de plataformas y sistemas operativos.
+  Una aplicación puede ser manejada desde cualquier dispositivo.
+  Sin ser necesaria la adaptación a ninguna plataforma en particular.
+</p>
+</div>
+{% endblock %}
+
+
+

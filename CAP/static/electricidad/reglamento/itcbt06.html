@@ -1,0 +1,30 @@
+{% extends 'plantillas/resumen.html' %}
+
+{% load static %}
+{% block titulo %} Reglamento Electrotécnico de Baja Tensión REBT {% endblock %}
+{% block css %}
+<link href="{% static 'css/electricidad/reglamento/reglamento.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/programacion/programacion.js' %}"></script>
+{% endblock %}
+
+{% block menu %}
+
+{% endblock %}
+
+
+{% block contenido %}
+<div id="contenido">
+    <h1>Tipos de conductores</h1>
+    <h2>Cobre o aluminio, pueden ser aislados o desnudos.</h2>
+    <h1>Conductor neutro</h1>
+    <h2>La sección mínima será de 10 mm<span id="cuadrado">2</span> para el cobre y 16mm<span id="cuadrado">2</span> para el aluminio.</h2>
+    <h2>Cuando la sección sea la misma que la de las fases deberá ir identificado.</h2> 
+    <h2>La interrupción del conductor neutro deberá ser posterior a la desconexión de las fases y su conexión se realizará antes que las fases.</h2>
+    <h2>Estará puesto a tierra como máximo cada 500m.</h2>
+</div>
+{% endblock %}
+

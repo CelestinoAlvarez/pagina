@@ -1,0 +1,69 @@
+{% extends 'plantillas/baseWeb.html' %}
+
+{% load static %}
+{% block titulo %} Programación, Electricidad, Automatización {% endblock %}
+{% block css %}
+<link href="{% static 'css/electricidad/electricidad.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/electricidad/electricidad.js' %}"></script>
+{% endblock %}
+
+{% block menu %}
+<div id="barraMenu">
+  <button id="btInicio" class="botonMenu">Inicio</button>
+  <button id="btProgramacion" class="botonMenu">Programación</button>
+  <button id="btAutomatizacion" class="botonMenu">Automatización</button>
+  <button id="btElectricidad" class="botonElectricidad">Electricidad</button>
+</div>
+{% endblock %}
+
+
+{% block contenido %}
+</div>
+
+<h1> LEGISLACIÓN </h1>
+<ul>
+  <br>
+  <li><h2>Reglamento Electrotécnico de Baja Tensión</h2></li>
+  <br>
+  <p class="parrafo">Pretende ser una guía de consulta rápida en la cual se realizarán enlaces a páginas web de interés, donde se intente aclarar o 
+    cumplimentar la información relacionada.</p>
+  
+    <a href="/reglamento"><img src="{% static 'img/electricidad/reglamento.png' %}"></a>
+
+  <br>   <br>  <br>  <br>  <br>  <br>  
+  <li><h2>Reglamento Electrotécnico de Alta Tensión</h2></li>
+  <p class="parrafo">Guía de consulta y ayuda centrada fundamentalmente en centros de transformación.</p>
+  <a href=""><img src="{% static 'img/electricidad/centroTransformacion.jpg' %}"></a>
+  <br>   <br>  <br>  <br>  <br>  <br>
+  <li><h2>Reglamentación protección de incendios en establecimientos industriales</h2></li>
+  <p class="parrafo">Enlaces a documentación de la legislación y puntos de interés.</p>
+  <a href=""><img src="{% static 'img/electricidad/incendio.jpg' %}"></a>
+  <br>   <br>  <br> 
+</ul>
+
+<h1> CÁLCULOS ELÉCTRICOS </h1>
+<ul>
+  <br>
+  <li><h2>Cálculo de caida de tensión en conductores</h2></li>
+    <p class="parrafo">Cálculos en conductores permitiendo en todas las condiciones especificadas en la reglamentación vigente.</p>
+    <a href=""><img src="{% static 'img/electricidad/conductores.jpg' %}"></a>
+    <br>   <br>  <br>  <br>  <br>  <br>  
+  <li><h2>Cálculo de corrientes de cortocircuito</h2></li>
+    <p class="parrafo">Calculos de corrientes de cortocircuito en transformadores y conductores.</p>
+    <a href=""><img src="{% static 'img/electricidad/cortocircuito.jpg' %}"></a>
+  <br>   <br>  <br>  <br>  <br>  <br>  
+  <li></li><h2>Cálculos de caidas de tensión para proyectos</h2></li>
+    <p class="parrafo">Realización de tabla de caidas de tensión para la realización de proyectos de baja tensión.</p>
+    <a href=""><img src="{% static 'img/electricidad/tablaCalculo.gif' %}"></a>
+  <br>   <br>  <br> <br>
+</ul>
+
+
+<br>
+</div>
+
+{% endblock %}

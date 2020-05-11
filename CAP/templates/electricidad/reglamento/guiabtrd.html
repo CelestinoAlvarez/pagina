@@ -1,0 +1,55 @@
+{% extends 'plantillas/resumen.html' %}
+
+{% load static %}
+{% block titulo %} Reglamento Electrotécnico de Baja Tensión REBT {% endblock %}
+{% block css %}
+<link href="{% static 'css/electricidad/reglamento/reglamento.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/programacion/programacion.js' %}"></script>
+{% endblock %}
+
+{% block menu %}
+
+{% endblock %}
+
+
+{% block contenido %}
+<div id="contenido">
+<h1>ARTÍCULO 2-CAMPO DE APLICACIÓN <span id="pagina">(página 3)</h1>
+    <p>Corriente alterna inferior a 1.000V, corriente continua inferior a 1.500V</p>
+    <p>el presente Reglamento se aplicará a instalaciones nuevas, aquellas que sufran una reforma importante, considerando reforma importante
+        aquella que afecte a más del 50% de la potencia instalada y a las instalaciones existentes cuando se inspeccines, aplicando la normativa
+        vigente cuando se aprobaron, en caso de no haber sido aprobada se aplicará la normativa actual.
+    </p>
+    <p>Se aplicará cuando se produzca la modificación de nuevas líneas de producción, aún cuando se produzca una reducción de potencia.</p>
+    <p>Se aplicará también cuando el estado de la instalación implique riesgo para las personas o bienes.</p>
+
+<h1>ARTÍCULO 4-CLASIFICACIÓN DE TENSIONES. FRECUENCIA DE RED <span id="pagina">(página 4)</span></h1>
+    <p>Las tensiones normalizadas son 230V para redes monofásica y 400V para redes trifásicas, todas ellas a 50Hz.
+    </p>
+
+<h1>ARTÍCULO 9-INSTALACIONES DE ALUMBRADO EXTERIOR <span id="pagina">(página 6)</h1>
+    <p>Se consideran instalacines de alumbrado exterior aquellas que tienen por finalidad la iluminación de las vías de circulación o comunicació
+        y las de los espacios comprendidos entre edificacione que, por sus características o seguridad general, deben permanecar iluminados, 
+        <span id="importante">en forma permanente o circunstancial, sean o no de dominio público.</span>
+    </p>
+
+<h1>ARTÍCULO 10-TIPOS DE SUMINISTRO <span id="pagina">(página 7)</h1>
+    <p>Se considera suministro complementario aquel que aún partiendo del mismo transformador, dispone de una línea independiente del 
+            suministro normal. Se clasifican en tres tipos: socorro alimenta más del 15%, de reserva alimenta más del 25% y duplicado mayor del 50%
+    </p>
+
+<h1>ARTÍCULO 15-ACOMETIDAS E INSTALACIONES DE ENLACE <span id="pagina">(página 9)</h1>
+    <p>Acometida es la parte de la instalación de la red que alimenta la caja general de protección. Será responsabilidad de la empresa suministradora.</p>
+    <p>La instalación de enlace es la parte de la instalación que une la caja general de protección con las instalaciones interiores o receptoras.
+        Comprende desde la caja de protección, incluida esta, hasta los dispositivos de protección y mando.</p>
+    <p>La línea general de alimentación es la parte de la instalación que une la caja general de protección con las derivaciones individuales.</p>
+    <p>Derivación individual parte de la línea general de alimentación y comprende los aparatos de medida, la línea de alimentación
+        del abonado y los dispositivos de mando y protección.
+    </p>
+</div>
+{% endblock %}
+

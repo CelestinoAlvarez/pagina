@@ -1,0 +1,28 @@
+{% extends 'plantillas/resumen.html' %}
+
+{% load static %}
+{% block titulo %} Reglamento Electrotécnico de Baja Tensión REBT {% endblock %}
+{% block css %}
+<link href="{% static 'css/electricidad/reglamento/reglamento.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/programacion/programacion.js' %}"></script>
+{% endblock %}
+
+{% block menu %}
+
+{% endblock %}
+
+
+{% block contenido %}
+<div id="contenido">
+    <h1>APARTADOS DE INTERES</h1>
+    <ul>
+        <li>Instalaciones que necesitan proyecto (páginas 9 y 10)</li>
+        <li>Tramitación de instalaciones (página 13)</li>
+        <li>Certificados de las instalaciones (página 15)</li>
+    </ul>
+</div>
+{% endblock %}

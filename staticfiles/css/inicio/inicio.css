@@ -1,0 +1,57 @@
+
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+   }
+   img, fieldset { border: 0; }
+   ol { margin-left: 1.4em; list-style: decimal; }
+   ul { margin-left: 1em; list-style:square; }
+   q:before, q:after { content:''; }
+   
+   /* CARGA DE FUENTES */
+   @font-face {
+     font-family: "Prime-Regular";
+     src: url("fuentes/Prime-Regular.otf");
+   }
+
+   h1 {
+       font-family: Prime-Regular,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       font-size: 200px;
+       text-align: center;
+       color:#fff;
+       margin-top:10px;
+ 
+   }
+
+   h1 span{
+        color: #fff;
+        font-size: 0.5em;
+        margin-top: 10px;
+        margin-left: -85px;
+        padding-top: -10px;
+}
+
+   body{
+       background-color: #161d1d;
+   }
+
+   
+
+   #logo{
+       width: 600px;
+       height: 240px;
+       margin:auto;
+       border: solid 10px cornsilk;
+       border-radius: 10px;
+     
+   }
+
+   h4{
+       color:white;
+   }
+
+   a {
+        text-decoration: none;
+   }

@@ -1,0 +1,146 @@
+
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+   }
+   img, fieldset { border: 0; }
+   ol { margin-left: 1.4em; list-style: decimal; }
+   ul { margin-left: 1em; list-style:square; }
+   q:before, q:after { content:''; }
+   
+   /* CARGA DE FUENTES */
+   @font-face {
+     font-family: "Prime-Regular";
+     src: url("/static/css/principal/fuentes/Prime-Regular.otf");
+   }
+   
+   @font-face {
+     font-family: "Prime-Light";
+     src: url("/static/css/principal/fuentes/Prime-Light.otf");
+   }
+   
+   html{
+       background-color: #8f9091;
+       background-image: url("/static/img/principal/Fondo.png");
+   }
+   
+   body{
+       margin:auto;
+       background-color: white;
+       width: 980px;
+   }
+   
+   #principal{
+       background-color: white;
+       border-left: 1px solid black;
+       border-right: 1px solid black;
+       margin-bottom: 0px;
+       margin-top:0px;
+   }
+   
+   #encabezado{
+     width: 978px;
+     height: 120px;
+     border-top:1px solid rgb(85, 85, 87);
+     border-bottom:1px solid rgb(85, 85, 87);
+     margin: auto;  
+     margin-top:10px;
+     background-image:url("/static/img/principal/Industria40.png");
+     }
+   
+   
+   #nombreEmpresa{
+     border:1px solid #ffffff;
+     background-color: rgba(134, 157, 178,0.7);
+     width: 200px;
+     height: 80px;
+     margin: 20px 0 0 20px;
+     border-radius: 5px;
+     text-shadow: 3px 2px 2px black;
+     
+   }
+   #nombreEmpresa p{
+     font-size: 4em;
+     font-family: "Prime-Regular",Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     margin-left: 5px;
+     margin-top: 5px;
+     color:#2a91f1;
+     padding-left: 15px;
+   }
+   
+   #nombreEmpresa span{
+     font-size: .5em;
+     font-family:"Prime-Light",Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     margin-left: -50px;
+     margin-top: 2px;
+   }
+   
+   #imagen img{
+     width: 1000px;
+     height: 200px;
+   }
+   
+   h1{
+     font-size:25px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-weight: bold;
+     color: #2a91f1;
+     margin:30px 30px 10px 50px;
+     border-bottom:solid 1px  #2a91f1;
+   }
+   
+   h2{
+    font-size:20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #2a91f1;
+    margin:30px 30px 10px 50px;
+    border-bottom:solid 1px  #2a91f1;
+  }
+
+   
+   .parrafo{
+     font-size: 1.3em;
+     margin: 20px 30px 0px 50px;
+     /*text-align: justify;*/
+     color: rgb(85, 85, 87);
+     text-indent: 40px;
+     line-height: 35px;
+   }
+   
+   
+   .caracteristicas{
+     font-size: 1.3em;
+     margin: 20px 0px 20px 0px;
+     /*text-align: justify;*/
+     color: black;
+     text-indent: 80px;
+     line-height: 35px;
+     font-style: italic;
+     background-color:#2a91f1;
+   }
+   
+   .pie{
+     background-color: rgb(75, 73, 73);
+     color:white;
+     border-left: black;
+     border-right: black;
+   }
+   .pie p{
+     margin: 10px 0px 10px 30px;
+     font-size: 20px;
+   }
+   
+   .pie hr{
+     color:white;
+     background-color:rgb(75, 73, 73) ;
+     margin: 0px;
+   }
+   
+   .pie span{
+     margin-left: 520px;
+   }
+   
+   
